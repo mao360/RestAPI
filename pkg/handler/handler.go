@@ -2,9 +2,15 @@ package handler
 
 import (
 	"github.com/labstack/echo/v4"
+	"github.com/mao360/RestAPI/pkg/service"
 )
 
 type Handler struct {
+	services *service.Service
+}
+
+func NewHandler(services *service.Service) *Handler { // НАПИСАНО САМОСТОЯТЕЛЬНО, НАДО ЧЕКНУТЬ
+	return &Handler{}
 }
 
 func (h *Handler) InitRouts() *echo.Echo { //echo.Route
