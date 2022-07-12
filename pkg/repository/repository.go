@@ -1,5 +1,7 @@
 package repository
 
+import "github.com/jackc/pgx/v4/pgxpool"
+
 type Authorization interface {
 }
 
@@ -15,6 +17,6 @@ type Repository struct {
 	TodoItem
 }
 
-func NewRepository() *Repository {
+func NewRepository(db *pgxpool.Pool) *Repository {
 	return &Repository{}
 }
